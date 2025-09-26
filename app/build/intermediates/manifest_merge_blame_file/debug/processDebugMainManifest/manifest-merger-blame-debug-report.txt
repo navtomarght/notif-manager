@@ -1,0 +1,100 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.notifmanager"
+4    android:versionCode="1"
+5    android:versionName="0.1" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+9        android:targetSdkVersion="33" />
+10
+11    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" />
+11-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:4:5-92
+11-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:4:22-90
+12    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+12-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:5:5-84
+12-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:5:22-82
+13
+14    <permission
+14-->[androidx.core:core:1.10.1] /data/data/com.termux/files/home/.gradle/caches/transforms-4/3c5616ba201a64fe4fc1bbadf2de03ec/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
+15        android:name="com.example.notifmanager.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+15-->[androidx.core:core:1.10.1] /data/data/com.termux/files/home/.gradle/caches/transforms-4/3c5616ba201a64fe4fc1bbadf2de03ec/transformed/core-1.10.1/AndroidManifest.xml:23:9-81
+16        android:protectionLevel="signature" />
+16-->[androidx.core:core:1.10.1] /data/data/com.termux/files/home/.gradle/caches/transforms-4/3c5616ba201a64fe4fc1bbadf2de03ec/transformed/core-1.10.1/AndroidManifest.xml:24:9-44
+17
+18    <uses-permission android:name="com.example.notifmanager.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+18-->[androidx.core:core:1.10.1] /data/data/com.termux/files/home/.gradle/caches/transforms-4/3c5616ba201a64fe4fc1bbadf2de03ec/transformed/core-1.10.1/AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.10.1] /data/data/com.termux/files/home/.gradle/caches/transforms-4/3c5616ba201a64fe4fc1bbadf2de03ec/transformed/core-1.10.1/AndroidManifest.xml:26:22-94
+19
+20    <application
+20-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:7:5-28:19
+21        android:allowBackup="true"
+21-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:8:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.10.1] /data/data/com.termux/files/home/.gradle/caches/transforms-4/3c5616ba201a64fe4fc1bbadf2de03ec/transformed/core-1.10.1/AndroidManifest.xml:28:18-86
+23        android:debuggable="true"
+24        android:extractNativeLibs="false"
+25        android:icon="@mipmap/ic_launcher"
+25-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:10:9-43
+26        android:label="Notif Manager" >
+26-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:9:9-38
+27        <activity
+27-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:11:9-17:20
+28            android:name="com.example.notifmanager.MainActivity"
+28-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:11:19-71
+29            android:exported="true" >
+29-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:12:13-36
+30            <intent-filter>
+30-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:13:13-16:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:14:17-68
+31-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:14:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:15:17-76
+33-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:15:27-74
+34            </intent-filter>
+35        </activity>
+36
+37        <service
+37-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:19:9-27:19
+38            android:name="com.example.notifmanager.NotifListenerService"
+38-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:20:13-73
+39            android:exported="true"
+39-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:23:13-36
+40            android:label="Notification Listener"
+40-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:21:13-50
+41            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+41-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:22:13-87
+42            <intent-filter>
+42-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:24:13-26:29
+43                <action android:name="android.service.notification.NotificationListenerService" />
+43-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:25:17-98
+43-->/data/data/com.termux/files/home/notif-manager/app/src/main/AndroidManifest.xml:25:25-96
+44            </intent-filter>
+45        </service>
+46
+47        <provider
+47-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/transforms-4/ac53d8dfceac5b6569effa6cf13664c4/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+48            android:name="androidx.startup.InitializationProvider"
+48-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/transforms-4/ac53d8dfceac5b6569effa6cf13664c4/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+49            android:authorities="com.example.notifmanager.androidx-startup"
+49-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/transforms-4/ac53d8dfceac5b6569effa6cf13664c4/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+50            android:exported="false" >
+50-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/transforms-4/ac53d8dfceac5b6569effa6cf13664c4/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+51            <meta-data
+51-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/transforms-4/ac53d8dfceac5b6569effa6cf13664c4/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+52                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+52-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/transforms-4/ac53d8dfceac5b6569effa6cf13664c4/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+53                android:value="androidx.startup" />
+53-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/transforms-4/ac53d8dfceac5b6569effa6cf13664c4/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+54            <meta-data
+54-->[androidx.lifecycle:lifecycle-process:2.4.1] /data/data/com.termux/files/home/.gradle/caches/transforms-4/f0ae0f7b83e22efddc10cfde4ee61b2b/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+55                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+55-->[androidx.lifecycle:lifecycle-process:2.4.1] /data/data/com.termux/files/home/.gradle/caches/transforms-4/f0ae0f7b83e22efddc10cfde4ee61b2b/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+56                android:value="androidx.startup" />
+56-->[androidx.lifecycle:lifecycle-process:2.4.1] /data/data/com.termux/files/home/.gradle/caches/transforms-4/f0ae0f7b83e22efddc10cfde4ee61b2b/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+57        </provider>
+58    </application>
+59
+60</manifest>
