@@ -1,0 +1,26 @@
+name: CI Smoke Test
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print environment
+        run: |
+          echo "runner: \$(uname -a)" > smoke-info.txt
+          echo "pwd: \$(pwd)" >> smoke-info.txt
+          echo "ls:" >> smoke-info.txt
+          ls -la >> smoke-info.txt
+      - name: Create artifact
+        run: echo "smoke test OK at \$(date -u)" > artifact.txt
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-artifact
+          path: |
+            artifact.txt
+            smoke-info.txt
