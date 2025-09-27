@@ -53,12 +53,18 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x ./gradlew
 
-      - name: Build debug APK
-        run: ./gradlew assembleDebug --no-daemon --stacktrace
+      - name: Build debug APK (capture log)
+        run: |
+          set -o pipefail
+          ./gradlew assembleDebug --no-daemon --stacktrace 2>&1 | tee build.log
 
-      - name: Upload APK artifact (always)
+      - name: Upload build artifacts (always)
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: app-debug-apk
-          path: app/build/outputs/apk/debug/*.apk
+          name: ci-artifacts
+          path: |
+            build.log
+            app/build/outputs/apk/
+            app/build/outputs/bundle/
+            app/build/outputs/mapping/
